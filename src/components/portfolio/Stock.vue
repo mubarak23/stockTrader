@@ -18,7 +18,7 @@
 				<div class="pull-right">
 					<button class="btn 
 					btn-success"
-					@click="sellStock"
+					@click="sellStocks"
 					:disabled="quantity <= 0 || Number.isInteger(quantity)">
 					Sell</button>
 				</div>
@@ -41,13 +41,14 @@
 				'sellStock'
 			]),
 
-			sellStock(){
+			sellStocks(){
 				const order = {
 				stockId: this.stock.id,
 				stockPrice: this.stock.price,
 				quantity: this.quantity
 				};
-				this.sellStock();
+				this.sellStock(order);
+				this.quantity = 0;
 			}
 		}
 	}
