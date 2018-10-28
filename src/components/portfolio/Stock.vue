@@ -18,7 +18,7 @@
 				<div class="pull-right">
 					<button class="btn 
 					btn-success"
-					@click="sellStuck"
+					@click="sellStock"
 					:disabled="quantity <= 0 || Number.isInteger(quantity)">
 					Sell</button>
 				</div>
@@ -28,7 +28,7 @@
 </template>
 
 <script>
-	imort { mapActions } from 'vuex';
+	import {mapActions} from 'vuex';
 	export default {
 		props: ['stock'],
 		data(){
@@ -38,7 +38,7 @@
 		},
 		methods:{
 			...mapActions([
-				'sellStuck'
+				'sellStock'
 			]),
 
 			sellStock(){

@@ -40,7 +40,7 @@
 				const order = {
 					stockId: this.stock.id,
 					stockPrice: this.stock.price,
-					quatity: this.quantity
+					quantity: this.quantity
 				};
 				console.log(order);
 				this.$store.dispatch('buyStock', order);
