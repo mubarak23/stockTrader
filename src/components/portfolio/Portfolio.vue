@@ -8,6 +8,7 @@
 	import {mapGetters} from 'vuex';
 	import Stock from './Stock.vue';
 	export default{
+		
 		computed:{
 			...mapGetters({
 				stocks: 'stockPorfolio',
