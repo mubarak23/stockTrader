@@ -6,6 +6,8 @@ import store from './store/store';
 
 
 Vue.use(VueRouter);
+Vue.use(VueResource);
+vue.http.options.root = 'https://stock-trader-34e57.firebaseio.com/';
 Vue.filter('currency', (value) => {
 	return '$' + value.toLocaleString();
 })
